@@ -19,6 +19,9 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false
     },
+    contraseña: {
+      type: DataTypes.ENUM('admin', 'user'),
+    },
     
   },
   {

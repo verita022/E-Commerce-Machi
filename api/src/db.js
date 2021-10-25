@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { Sequelize } = require('sequelize');
-const AdministradorModel = require('./models/administrador');
+const UsuarioModel = require('./models/usuarios');
 const ProductosModel = require('./models/productos');
 const ImagenesModel = require('./models/imagenes');
 
@@ -13,13 +13,13 @@ const {
     native: false, 
   });
 
-  const Administrador = AdministradorModel(sequelize)
+  const Usuario = UsuarioModel(sequelize)
   const Producto = ProductosModel(sequelize)
   const Imagenes = ImagenesModel(sequelize)
 
   module.exports = {
      conn: sequelize,
-     Administrador,
+     Usuario,
      Producto,
      Imagenes
   };
